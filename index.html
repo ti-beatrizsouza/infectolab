@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>InfectoLab Clinical Simulator</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- FUNDO -->
+
+<div class="background"></div>
+
+<!-- HOME -->
+
+<section id="home" class="screen">
+
+<div class="home-box">
+
+<img src="imagens/logo.png" class="logo">
+
+<h1>INFECTOLAB</h1>
+
+<h2>Clinical Simulator</h2>
+
+<p>
+Simulação clínica acadêmica baseada em
+Parasitologia, Microbiologia e Imunologia.
+</p>
+
+<p class="subtitle">
+Caso clínico baseado em vigilância epidemiológica
+na região amazônica.
+</p>
+
+<div class="menu-grid">
+
+<div class="menu-card active"
+onclick="abrirCaso()">
+
+<h3>🦠</h3>
+
+<p>PARASITOLOGIA</p>
+
+</div>
+
+<div class="menu-card disabled">
+
+<h3>🍄</h3>
+
+<p>MICOLOGIA</p>
+
+</div>
+
+<div class="menu-card disabled">
+
+<h3>🧫</h3>
+
+<p>BACTERIOLOGIA</p>
+
+</div>
+
+<div class="menu-card disabled">
+
+<h3>🧬</h3>
+
+<p>VIROLOGIA</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTEXTO -->
+
+<section id="contexto" class="screen hidden">
+
+<div class="content-box">
+
+<h1>COMUNIDADE SÃO RAIMUNDO</h1>
+
+<p>
+
+A comunidade São Raimundo fica localizada
+às margens do Rio Solimões, com acesso
+exclusivamente fluvial.
+
+A localidade possui cerca de 120 famílias
+vivendo da pesca, agricultura familiar e
+extração vegetal.
+
+A unidade básica mais próxima fica a
+aproximadamente 4 horas de voadeira.
+
+Nos últimos 15 dias, moradores relataram
+aumento de casos febris após o período
+de cheia dos rios.
+
+O aumento da umidade e acúmulo de água
+parada favoreceram proliferação do mosquito
+Anopheles.
+
+A equipe de enfermagem recebe alerta da
+vigilância municipal sobre possível aumento
+de casos de malária na região.
+
+</p>
+
+<button onclick="abrirPaciente()">
+CONTINUAR
+</button>
+
+</div>
+
+</section>
+
+<!-- PACIENTE -->
+
+<section id="paciente" class="screen hidden">
+
+<div class="content-box">
+
+<h1>PACIENTE</h1>
+
+<div class="patient-grid">
+
+<div class="patient-card">
+
+<h2>IDENTIFICAÇÃO</h2>
+
+<p>
+Nome: José Arimateia Ferreira dos Santos
+</p>
+
+<p>
+Idade: 38 anos
+</p>
+
+<p>
+Profissão: Pescador artesanal
+</p>
+
+</div>
+
+<div class="patient-card">
+
+<h2>CONTEXTO SOCIAL</h2>
+
+<ul>
+
+<li>Mora em casa parcialmente aberta</li>
+
+<li>Dorme sem mosquiteiro</li>
+
+<li>Pesca noturna</li>
+
+<li>Baixa escolaridade</li>
+
+<li>Acesso irregular à saúde</li>
+
+</ul>
+
+</div>
+
+<div class="patient-card">
+
+<h2>QUADRO CLÍNICO</h2>
+
+<ul>
+
+<li>Febre há 5 dias</li>
+
+<li>Sudorese intensa</li>
+
+<li>Cefaleia</li>
+
+<li>Calafrios</li>
+
+<li>Mialgia</li>
+
+<li>Náuseas</li>
+
+</ul>
+
+</div>
+
+<div class="patient-card">
+
+<h2>TRIAGEM</h2>
+
+<p>Temperatura: 39,4°C</p>
+
+<p>PA: 90x60 mmHg</p>
+
+<p>FC: 118 bpm</p>
+
+<p>Mucosas hipocoradas</p>
+
+</div>
+
+</div>
+
+<button onclick="abrirDecisao()">
+ANALISAR CASO
+</button>
+
+</div>
+
+</section>
+
+<!-- DECISÃO -->
+
+<section id="decisao" class="screen hidden">
+
+<div class="content-box">
+
+<h1>TOMADA DE DECISÃO</h1>
+
+<p class="question">
+
+Qual deve ser a primeira conduta da equipe?
+
+</p>
+
+<div class="choices">
+
+<div class="choice"
+onclick="escolha('a')">
+
+<h3>ALTERNATIVA A</h3>
+
+<p>
+Administrar antitérmico
+e liberar o paciente.
+</p>
+
+</div>
+
+<div class="choice"
+onclick="escolha('b')">
+
+<h3>ALTERNATIVA B</h3>
+
+<p>
+Investigar histórico epidemiológico
+e solicitar gota espessa.
+</p>
+
+</div>
+
+<div class="choice"
+onclick="escolha('c')">
+
+<h3>ALTERNATIVA C</h3>
+
+<p>
+Prescrever antibiótico empírico.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESULTADO -->
+
+<section id="resultado" class="screen hidden">
+
+<div class="content-box">
+
+<h1 id="resultadoTitulo"></h1>
+
+<div id="resultadoTexto"></div>
+
+<button onclick="abrirLaboratorio()">
+RESULTADO LABORATORIAL
+</button>
+
+</div>
+
+</section>
+
+<!-- LABORATÓRIO -->
+
+<section id="laboratorio" class="screen hidden">
+
+<div class="content-box">
+
+<h1>RESULTADO LABORATORIAL</h1>
+
+<p>
+
+A gota espessa evidencia:
+
+</p>
+
+<ul>
+
+<li>Presença de Plasmodium vivax</li>
+
+<li>Parasitemia moderada</li>
+
+</ul>
+
+<p>
+
+O diagnóstico precoce permitiu
+início imediato do tratamento e
+redução do risco de agravamento clínico.
+
+</p>
+
+<button onclick="location.reload()">
+FINALIZAR CASO
+</button>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
