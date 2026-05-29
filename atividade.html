@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Parasitologia | InfectoLab</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<section id="contexto"
+class="screen">
+
+<div class="content-box">
+
+<h1>
+
+COMUNIDADE SÃO RAIMUNDO
+
+</h1>
+
+<p>
+
+A comunidade São Raimundo fica localizada às margens do Rio Solimões,
+com acesso exclusivamente fluvial.
+
+</p>
+
+<p>
+
+Nos últimos 15 dias houve aumento de casos febris após o período
+de cheia dos rios.
+
+</p>
+
+<p>
+
+O aumento da umidade e acúmulo de água parada favoreceram
+a proliferação do mosquito Anopheles.
+
+</p>
+
+<div class="navigation-buttons">
+
+<a href="aluno.html">
+
+<button>
+
+VOLTAR
+
+</button>
+
+</a>
+
+<button onclick="abrirPaciente()">
+
+CONTINUAR
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="paciente"
+class="screen hidden">
+
+<div class="content-box">
+
+<h1>
+
+PACIENTE
+
+</h1>
+
+<div class="patient-grid">
+
+<div class="patient-card">
+
+<h2>
+
+IDENTIFICAÇÃO
+
+</h2>
+
+<p>
+
+José Arimateia Ferreira dos Santos
+
+</p>
+
+<p>
+
+38 anos
+
+</p>
+
+<p>
+
+Pescador artesanal
+
+</p>
+
+</div>
+
+<div class="patient-card">
+
+<h2>
+
+QUADRO CLÍNICO
+
+</h2>
+
+<p>
+
+Febre intermitente
+
+</p>
+
+<p>
+
+Sudorese intensa
+
+</p>
+
+<p>
+
+Cefaleia
+
+</p>
+
+<p>
+
+Calafrios
+
+</p>
+
+<p>
+
+Fraqueza extrema
+
+</p>
+
+</div>
+
+</div>
+
+<div class="navigation-buttons">
+
+<button onclick="voltarContexto()">
+
+VOLTAR
+
+</button>
+
+<button onclick="abrirDecisao()">
+
+ANALISAR CASO
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="decisao"
+class="screen hidden">
+
+<div class="content-box">
+
+<h1>
+
+TOMADA DE DECISÃO
+
+</h1>
+
+<p class="question">
+
+Qual deve ser a primeira conduta?
+
+</p>
+
+<div class="choices">
+
+<div class="choice"
+onclick="resposta('a')">
+
+<h3>
+
+Alternativa A
+
+</h3>
+
+<p>
+
+Administrar antitérmico e liberar o paciente.
+
+</p>
+
+</div>
+
+<div class="choice"
+onclick="resposta('b')">
+
+<h3>
+
+Alternativa B
+
+</h3>
+
+<p>
+
+Investigar histórico epidemiológico e solicitar gota espessa.
+
+</p>
+
+</div>
+
+<div class="choice"
+onclick="resposta('c')">
+
+<h3>
+
+Alternativa C
+
+</h3>
+
+<p>
+
+Prescrever antibiótico empírico.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="navigation-buttons">
+
+<button onclick="voltarPaciente()">
+
+VOLTAR
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="resultado"
+class="screen hidden">
+
+<div class="content-box">
+
+<h1 id="resultadoTitulo"></h1>
+
+<div id="resultadoTexto"></div>
+
+<button onclick="abrirLab()">
+
+RESULTADO LABORATORIAL
+
+</button>
+
+</div>
+
+</section>
+
+<section id="laboratorio"
+class="screen hidden">
+
+<div class="content-box">
+
+<h1>
+
+RESULTADO LABORATORIAL
+
+</h1>
+
+<div class="lab-box">
+
+<p>
+
+Presença de Plasmodium vivax.
+
+</p>
+
+<p>
+
+Parasitemia moderada.
+
+</p>
+
+</div>
+
+<a href="aluno.html">
+
+<button>
+
+FINALIZAR CASO
+
+</button>
+
+</a>
+
+</div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
